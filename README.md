@@ -4,7 +4,7 @@
 
 [![Hadoop](https://img.shields.io/badge/Hadoop-3.3.6-yellow)](https://hadoop.apache.org/docs/r3.3.6/)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue)](https://docs.python.org/3.8/)
-[![Java](https://img.shields.io/badge/Java-17-orange)]([https://docs.oracle.com/en/java/javase/11/](https://www.oracle.com/java/technologies/javase/17-0-18-relnotes.html))
+[![Java](https://img.shields.io/badge/Java-17-orange)](https://docs.oracle.com/en/java/javase/17/)
 [![Dataset](https://img.shields.io/badge/Dataset-GTD-red)](https://www.kaggle.com/datasets/START-UMD/gtd)
 [![Platform](https://img.shields.io/badge/Platform-HDFS-lightgrey)](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html)
 
