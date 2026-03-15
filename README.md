@@ -2,11 +2,11 @@
 
 ## Hadoop MapReduce Big Data Project
 
-![Hadoop](https://img.shields.io/badge/Hadoop-3.3.6-yellow)
-![Python](https://img.shields.io/badge/Python-3.8+-blue)
-![Java](https://img.shields.io/badge/Java-11-orange)
-![Dataset](https://img.shields.io/badge/Dataset-GTD-red)
-![Platform](https://img.shields.io/badge/Platform-HDFS-lightgrey)
+![Hadoop](https://img.shields.io/badge/Hadoop-3.3.6-yellow)(https://hadoop.apache.org/docs/r3.3.6/)
+![Python](https://img.shields.io/badge/Python-3.8+-blue)(https://docs.python.org/3.8/)
+![Java](https://img.shields.io/badge/Java-11-orange)(https://docs.oracle.com/en/java/javase/11/)
+![Dataset](https://img.shields.io/badge/Dataset-GTD-red)(https://www.kaggle.com/datasets/START-UMD/gtd)
+![Platform](https://img.shields.io/badge/Platform-HDFS-lightgrey)(https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html)
 
 Cloud Computing Assignment
 University of Ruhuna – Faculty of Engineering
