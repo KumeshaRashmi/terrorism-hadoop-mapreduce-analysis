@@ -188,8 +188,8 @@ Install the following:
 
 - Hadoop 3.3.6
 - Python 3.8+
-- Java 17.0.18
-- Ubuntu / WSL2
+- Java 17
+- Ubuntu / WSL
 
 Check installations:
 
