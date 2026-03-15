@@ -175,7 +175,7 @@ gtd_mapreduce_project
 ├── Evidences of Execution.zip
 │
 ├── report
-│   └── Take Home Assignment_23rd-Group06.pdf
+│   └── Take Home Assignment_23rd-Group10.pdf
 │
 └── README.md
 ```
