@@ -1,0 +1,9 @@
+Armed Assault	Incidents:42669	TotalKilled:160297	TotalWounded:482	AvgKilled:3.76	AvgWounded:0.01
+Assassination	Incidents:19312	TotalKilled:24920	TotalWounded:78	AvgKilled:1.29	AvgWounded:0.00
+Bombing/Explosion	Incidents:88255	TotalKilled:157321	TotalWounded:2503	AvgKilled:1.78	AvgWounded:0.03
+Facility/Infrastructure Attack	Incidents:10355	TotalKilled:3642	TotalWounded:342	AvgKilled:0.35	AvgWounded:0.03
+Hijacking	Incidents:659	TotalKilled:3718	TotalWounded:48	AvgKilled:5.64	AvgWounded:0.07
+Hostage Taking (Barricade Incident)	Incidents:991	TotalKilled:4478	TotalWounded:149	AvgKilled:4.52	AvgWounded:0.15
+Hostage Taking (Kidnapping)	Incidents:11158	TotalKilled:24231	TotalWounded:45	AvgKilled:2.17	AvgWounded:0.00
+Unarmed Assault	Incidents:1015	TotalKilled:880	TotalWounded:876	AvgKilled:0.87	AvgWounded:0.86
+Unknown	Incidents:7276	TotalKilled:32381	TotalWounded:33	AvgKilled:4.45	AvgWounded:0.00
