@@ -81,6 +81,7 @@ Big Data Pipeline
 
 ```mermaid
 flowchart TD
+    subgraph Execution_Flow [MapReduce Pipeline for GTD Analysis]
     A[Raw GTD Dataset] --> B[Upload to HDFS]
 
     B --> C1[Mapper Node 1]
@@ -98,14 +99,19 @@ flowchart TD
     E2 --> F
 
     F --> G[results_clean.txt]
+    end
 
-    style B fill:#cce5ff
-    style C1 fill:#d4edda
-    style C2 fill:#d4edda
-    style C3 fill:#d4edda
-    style D fill:#fff3cd
-    style E1 fill:#f8d7da
-    style E2 fill:#f8d7da
+    %% Style definitions for White Background and Black Text
+    style A fill:#ffffff,stroke:#333,stroke-width:2px,color:#000
+    style B fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000
+    style C1 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
+    style C2 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
+    style C3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
+    style D fill:#fffde7,stroke:#fbc02d,stroke-width:2px,color:#000
+    style E1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000
+    style E2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000
+    style F fill:#ffffff,stroke:#333,stroke-width:2px,color:#000
+    style G fill:#f5f5f5,stroke:#333,stroke-width:2px,color:#000
 ```
 
 Dataset → HDFS Storage → Mapper → Shuffle & Sort → Reducer → Results
