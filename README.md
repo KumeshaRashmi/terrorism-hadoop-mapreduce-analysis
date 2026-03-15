@@ -58,7 +58,7 @@ Dataset statistics
 
 | Property      | Value       |
 | ------------- | ----------- |
-| Total Records | 181,690     |
+| Total Records | 181,691     |
 | Time Range    | 1970 – 2017 |
 | Columns       | 135         |
 | Dataset Size  | ~162MB      |
