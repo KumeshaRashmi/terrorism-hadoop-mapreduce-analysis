@@ -23,11 +23,10 @@ EC7204 | Semester 7 | 2026
 5. Project Structure
 6. Installation Requirements
 7. Running the Project
-8. Mapper and Reducer Code
-9. Example Output
-10. Key Insights
-11. Performance Observations
-12. Future Improvements
+8. Example Output
+9. Key Insights
+10. Performance Observations
+11. Future Improvements
 ---
 
 # 1. Project Overview
@@ -268,7 +267,7 @@ hdfs dfs -get /user/gtd/output/part-00000 results.txt
 ```
 
 ---
-## 9. Example Output
+## 8. Example Output
 
 | Attack Type | Incidents | TotalKilled | TotalWounded | AvgKilled | AvgWounded |
 |:---|:---:|:---:|:---:|:---:|:---:|
@@ -284,7 +283,7 @@ hdfs dfs -get /user/gtd/output/part-00000 results.txt
 | **All** | **181,690** | **411,868** | **4,956** | **2.27** | **0.03** |
 ---
 
-## 10. Key Insights
+## 9. Key Insights
 
 - **Bombing attacks dominate the dataset** with the highest incident count.
 - **Armed assaults show the highest lethality per attack**.
@@ -293,7 +292,7 @@ hdfs dfs -get /user/gtd/output/part-00000 results.txt
 
 ---
 
-## 11. Performance Observations
+## 10. Performance Observations
 
 - **Dataset processed**: 181,691 records
 - **Cluster**: Hadoop pseudo-distributed (single node)
@@ -304,7 +303,7 @@ hdfs dfs -get /user/gtd/output/part-00000 results.txt
 ---
 
 
-## 12. Future Improvements
+## 11. Future Improvements
 
 Possible improvements include:
 
