@@ -58,7 +58,7 @@ Dataset statistics
 
 | Property      | Value       |
 | ------------- | ----------- |
-| Total Records | 181,691     |
+| Total Records | 181,690     |
 | Time Range    | 1970 – 2017 |
 | Columns       | 135         |
 | Dataset Size  | ~162MB      |
@@ -292,7 +292,7 @@ hdfs dfs -get /user/gtd/output/part-00000 results.txt
 
 ## 10. Performance Observations
 
-- **Dataset processed**: 181,691 records
+- **Dataset processed**: 181,690 records
 - **Cluster**: Hadoop pseudo-distributed (single node)
 - **Execution time**: approximately 4–6 minutes
 - **Mapper stage** consumed most processing time due to CSV parsing
