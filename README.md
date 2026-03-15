@@ -79,6 +79,7 @@ The system processes the Global Terrorism Dataset using the Hadoop MapReduce fra
 
 Big Data Pipeline
 
+```mermaid
 flowchart TD
     A[Raw GTD Dataset] --> B[Upload to HDFS]
 
@@ -105,7 +106,6 @@ flowchart TD
     style D fill:#fff3cd
     style E1 fill:#f8d7da
     style E2 fill:#f8d7da
-
 Dataset → HDFS Storage → Mapper → Shuffle & Sort → Reducer → Results
 
 The Hadoop MapReduce framework automatically distributes data across multiple mapper nodes, enabling parallel processing of large-scale datasets. After the mapper phase, intermediate key-value pairs are shuffled and sorted before being aggregated in the reducer phase to produce final statistics.
