@@ -133,7 +133,6 @@ Example:
 Bombing → (3,10,1)
 Bombing → (1,5,1)
 Bombing → (0,2,1)
-
 ---
 
 ## Shuffle and Sort
@@ -166,7 +165,6 @@ Bombing → Incidents:3
            TotalWounded:17
            AvgKilled:1.33
            AvgWounded:5.67
-
 ---
 
 # 5. Project Structure
@@ -274,19 +272,18 @@ hdfs dfs -get /user/gtd/output/part-00000 results.txt
 ## 9. Example Output
 
 ```
-
-| Attack Type                             | Incidents | TotalKilled | TotalWounded | AvgKilled | AvgWounded |
-|----------------------------------------|-----------|------------|--------------|-----------|------------|
-| Bombing/Explosion                       | 88,255    | 157,321    | 2,503        | 1.78      | 0.03       |
-| Armed Assault                           | 42,669    | 160,297    | 482          | 3.76      | 0.01       |
-| Assassination                           | 19,312    | 24,920     | 78           | 1.29      | 0.00       |
-| Facility/Infrastructure Attack          | 10,355    | 3,642      | 342          | 0.35      | 0.03       |
-| Hijacking                               | 659       | 3,718      | 48           | 5.64      | 0.07       |
-| Hostage Taking (Barricade Incident)     | 991       | 4,478      | 149          | 4.52      | 0.15       |
-| Hostage Taking (Kidnapping)             | 11,158    | 24,231     | 45           | 2.17      | 0.00       |
-| Unarmed Assault                          | 1,015     | 880        | 876          | 0.87      | 0.86       |
-| Unknown                                 | 7,276     | 32,381     | 33           | 4.45      | 0.00       |
-| **All**                                 |           |            |              |           |            |
+| Attack Type | Incidents | TotalKilled | TotalWounded | AvgKilled | AvgWounded |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| Bombing/Explosion | 88,255 | 157,321 | 2,503 | 1.78 | 0.03 |
+| Armed Assault | 42,669 | 160,297 | 482 | 3.76 | 0.01 |
+| Assassination | 19,312 | 24,920 | 78 | 1.29 | 0.00 |
+| Facility/Infrastructure Attack | 10,355 | 3,642 | 342 | 0.35 | 0.03 |
+| Hijacking | 659 | 3,718 | 48 | 5.64 | 0.07 |
+| Hostage Taking (Barricade Incident) | 991 | 4,478 | 149 | 4.52 | 0.15 |
+| Hostage Taking (Kidnapping) | 11,158 | 24,231 | 45 | 2.17 | 0.00 |
+| Unarmed Assault | 1,015 | 880 | 876 | 0.87 | 0.86 |
+| Unknown | 7,276 | 32,381 | 33 | 4.45 | 0.00 |
+| **All** | **181,690** | **411,868** | **4,956** | **2.27** | **0.03** |
 ```
 
 ---
