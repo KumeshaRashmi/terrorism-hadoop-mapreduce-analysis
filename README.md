@@ -171,8 +171,6 @@ Bombing → Incidents:3
 ```text
 gtd_mapreduce_project
 │
-├── dataset
-│   └── globalterrorismdb_0718dist.csv
 │
 ├── src
 │   ├── mapper.py
@@ -180,12 +178,12 @@ gtd_mapreduce_project
 │
 ├── results
 │   └── results.txt
+│   └── result_cleans.txt
 │
-├── screenshots
-│   ├── cluster_running.png
-│   ├── hdfs_upload.png
-│   ├── job_execution.png
-│   └── output_results.png
+├── Evidences of Execution.zip
+│
+├── report
+│   └── Take Home Assignment_23rd-Group06.pdf
 │
 └── README.md
 ```
