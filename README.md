@@ -268,10 +268,8 @@ hdfs dfs -get /user/gtd/output/part-00000 results.txt
 ```
 
 ---
-
 ## 9. Example Output
 
-```
 | Attack Type | Incidents | TotalKilled | TotalWounded | AvgKilled | AvgWounded |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | Bombing/Explosion | 88,255 | 157,321 | 2,503 | 1.78 | 0.03 |
@@ -284,8 +282,6 @@ hdfs dfs -get /user/gtd/output/part-00000 results.txt
 | Unarmed Assault | 1,015 | 880 | 876 | 0.87 | 0.86 |
 | Unknown | 7,276 | 32,381 | 33 | 4.45 | 0.00 |
 | **All** | **181,690** | **411,868** | **4,956** | **2.27** | **0.03** |
-```
-
 ---
 
 ## 10. Key Insights
