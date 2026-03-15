@@ -4,7 +4,7 @@
 
 [![Hadoop](https://img.shields.io/badge/Hadoop-3.3.6-yellow)](https://hadoop.apache.org/docs/r3.3.6/)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue)](https://docs.python.org/3.8/)
-[![Java](https://img.shields.io/badge/Java-11-orange)](https://docs.oracle.com/en/java/javase/11/)
+[![Java](https://img.shields.io/badge/Java-17-orange)]([https://docs.oracle.com/en/java/javase/11/](https://www.oracle.com/java/technologies/javase/17-0-18-relnotes.html))
 [![Dataset](https://img.shields.io/badge/Dataset-GTD-red)](https://www.kaggle.com/datasets/START-UMD/gtd)
 [![Platform](https://img.shields.io/badge/Platform-HDFS-lightgrey)](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html)
 
@@ -74,7 +74,7 @@ Important fields used in the analysis:
 ---
 
 # 3. System Architecture
-The system processes the Global Terrorism Dataset using the Hadoop MapReduce framework. The pipeline begins by storing the dataset in the Hadoop Distributed File System (HDFS), after which the MapReduce job processes the data in parallel across multiple nodes.
+The system processes the Global Terrorism Dataset using the Hadoop MapReduce framework in a pseudo-distributed environment. The pipeline begins by storing the dataset in the Hadoop Distributed File System (HDFS), which manages data blocks locally while simulating a distributed environment.
 
 Big Data Pipeline
 
@@ -83,39 +83,31 @@ flowchart TD
     subgraph Execution_Flow [MapReduce Pipeline for GTD Analysis]
     A[Raw GTD Dataset] --> B[Upload to HDFS]
 
-    B --> C1[Mapper Node 1]
-    B --> C2[Mapper Node 2]
-    B --> C3[Mapper Node 3]
+    B --> C1[Mapper Task 1]
+    B --> C2[Mapper Task 2]
 
     C1 --> D[Shuffle and Sort]
     C2 --> D
-    C3 --> D
 
-    D --> E1[Reducer Node 1]
-    D --> E2[Reducer Node 2]
+    D --> E[Reducer Task]
 
-    E1 --> F[Final Aggregated Results]
-    E2 --> F
+    E --> F[Final Aggregated Results]
 
     F --> G[results_clean.txt]
     end
 
-    %% Style definitions for White Background and Black Text
+    %% Style definitions
     style A fill:#ffffff,stroke:#333,stroke-width:2px,color:#000
     style B fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000
     style C1 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
     style C2 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
-    style C3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
     style D fill:#fffde7,stroke:#fbc02d,stroke-width:2px,color:#000
-    style E1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000
-    style E2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000
+    style E fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000
     style F fill:#ffffff,stroke:#333,stroke-width:2px,color:#000
     style G fill:#f5f5f5,stroke:#333,stroke-width:2px,color:#000
 ```
 
-Dataset → HDFS Storage → Mapper → Shuffle & Sort → Reducer → Results
-
-The Hadoop MapReduce framework automatically distributes data across multiple mapper nodes, enabling parallel processing of large-scale datasets. After the mapper phase, intermediate key-value pairs are shuffled and sorted before being aggregated in the reducer phase to produce final statistics.
+The dataset is stored in HDFS across a single-node cluster. The MapReduce job splits the dataset into input splits (based on HDFS block size), which are processed as individual Mapper Tasks on the same machine. Following the mapper phase, intermediate key-value pairs are Shuffled and Sorted automatically by the framework before being aggregated in the Reducer Phase. While this setup runs on a single physical node, it accurately simulates the logic of a multi-node cluster where tasks would run on separate DataNodes in parallel to provide linear scalability.
 
 ---
 
@@ -196,7 +188,7 @@ Install the following:
 
 - Hadoop 3.3.6
 - Python 3.8+
-- Java 11
+- Java 17.0.18
 - Ubuntu / WSL2
 
 Check installations:
