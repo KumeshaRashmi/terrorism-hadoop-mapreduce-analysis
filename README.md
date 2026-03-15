@@ -106,6 +106,8 @@ flowchart TD
     style D fill:#fff3cd
     style E1 fill:#f8d7da
     style E2 fill:#f8d7da
+```
+
 Dataset → HDFS Storage → Mapper → Shuffle & Sort → Reducer → Results
 
 The Hadoop MapReduce framework automatically distributes data across multiple mapper nodes, enabling parallel processing of large-scale datasets. After the mapper phase, intermediate key-value pairs are shuffled and sorted before being aggregated in the reducer phase to produce final statistics.
@@ -187,14 +189,14 @@ gtd_mapreduce_project
 
 ---
 
-# 6. Installation Requirements
+## 6. Installation Requirements
 
 Install the following:
 
-Hadoop 3.3.6
-Python 3.8+
-Java 11
-Ubuntu / WSL2
+- Hadoop 3.3.6
+- Python 3.8+
+- Java 11
+- Ubuntu / WSL2
 
 Check installations:
 
@@ -206,9 +208,9 @@ python3 --version
 
 ---
 
-# 7. Running the Project
+## 7. Running the Project
 
-### Step 1 Start Hadoop
+### Step 1: Start Hadoop
 
 ```bash
 start-dfs.sh
@@ -218,15 +220,15 @@ jps
 
 Expected processes:
 
-NameNode
-DataNode
-ResourceManager
-NodeManager
-SecondaryNameNode
+- NameNode
+- DataNode
+- ResourceManager
+- NodeManager
+- SecondaryNameNode
 
 ---
 
-### Step 2 Upload Dataset
+### Step 2: Upload Dataset
 
 ```bash
 hdfs dfs -mkdir -p /user/gtd/input
@@ -235,7 +237,7 @@ hdfs dfs -put dataset/globalterrorismdb_0718dist.csv /user/gtd/input/
 
 ---
 
-### Step 3 Run Hadoop Streaming Job
+### Step 3: Run Hadoop Streaming Job
 
 ```bash
 hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar \
@@ -249,7 +251,7 @@ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar \
 
 ---
 
-### Step 4 View Output
+### Step 4: View Output
 
 ```bash
 hdfs dfs -cat /user/gtd/output/part-00000
@@ -263,52 +265,61 @@ hdfs dfs -get /user/gtd/output/part-00000 results.txt
 
 ---
 
-# 9. Example Output
+## 9. Example Output
 
 ```
-Bombing/Explosion    Incidents:88245    TotalKilled:110327    TotalWounded:214523    AvgKilled:1.25    AvgWounded:2.43
-Armed Assault        Incidents:42625    TotalKilled:89123     TotalWounded:45312     AvgKilled:2.09    AvgWounded:1.06
-Assassination        Incidents:19332    TotalKilled:21455     TotalWounded:3941      AvgKilled:1.11    AvgWounded:0.20
+
+| Attack Type                             | Incidents | TotalKilled | TotalWounded | AvgKilled | AvgWounded |
+|----------------------------------------|-----------|------------|--------------|-----------|------------|
+| Bombing/Explosion                       | 88,255    | 157,321    | 2,503        | 1.78      | 0.03       |
+| Armed Assault                           | 42,669    | 160,297    | 482          | 3.76      | 0.01       |
+| Assassination                           | 19,312    | 24,920     | 78           | 1.29      | 0.00       |
+| Facility/Infrastructure Attack          | 10,355    | 3,642      | 342          | 0.35      | 0.03       |
+| Hijacking                               | 659       | 3,718      | 48           | 5.64      | 0.07       |
+| Hostage Taking (Barricade Incident)     | 991       | 4,478      | 149          | 4.52      | 0.15       |
+| Hostage Taking (Kidnapping)             | 11,158    | 24,231     | 45           | 2.17      | 0.00       |
+| Unarmed Assault                          | 1,015     | 880        | 876          | 0.87      | 0.86       |
+| Unknown                                 | 7,276     | 32,381     | 33           | 4.45      | 0.00       |
+| **All**                                 |           |            |              |           |            |
 ```
 
 ---
 
-# 10. Key Insights
+## 10. Key Insights
 
-Bombing attacks dominate the dataset with the highest incident count.
-
-Armed assaults show the **highest lethality per attack**.
-
-Assassination attacks show a **high kill-to-wound ratio**, indicating targeted operations.
-
-Infrastructure attacks produce **minimal casualties**.
+- **Bombing attacks dominate the dataset** with the highest incident count.
+- **Armed assaults show the highest lethality per attack**.
+- **Assassination attacks show a high kill-to-wound ratio**, indicating targeted operations.
+- **Infrastructure attacks produce minimal casualties**.
 
 ---
 
-# 11. Performance Observations
+## 11. Performance Observations
 
-Dataset processed: 181,691 records
-Cluster: Hadoop pseudo-distributed (single node)
-
-Execution time: approximately **4–6 minutes**
-
-Mapper stage consumed most processing time due to CSV parsing.
-
-In a multi-node cluster, Hadoop would distribute mappers across nodes, providing **linear scalability**.
+- **Dataset processed**: 181,691 records
+- **Cluster**: Hadoop pseudo-distributed (single node)
+- **Execution time**: approximately 4–6 minutes
+- **Mapper stage** consumed most processing time due to CSV parsing
+- In a multi-node cluster, Hadoop would distribute mappers across nodes, providing **linear scalability**.
 
 ---
 
-# 12. Future Improvements
+
+## 12. Future Improvements
 
 Possible improvements include:
 
-• Add time-series analysis (casualties per year)
-• Analyze attacks by country or region
-• Deploy the job on AWS EMR or Google Dataproc
-• Replace MapReduce with Apache Spark for faster processing
-• Build a visualization dashboard for policymakers
+- Add time-series analysis (casualties per year)
+- Analyze attacks by country or region
+- Deploy the job on AWS EMR or Google Dataproc
+- Replace MapReduce with Apache Spark for faster processing
+- Build a visualization dashboard for policymakers
 
 ---
+
+
+
+
 
 
 
